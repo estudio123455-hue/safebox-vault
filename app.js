@@ -1,5 +1,14 @@
 // ==========================================
-// 1. VARIABLES GLOBALES Y SELECTORES
+// 1. CONFIGURACIÓN DE CREDENCIALES GOOGLE
+// ==========================================
+// ⚠️ REEMPLAZA ESTOS VALORES CON TUS LLAVES REALES
+const API_KEY = 'AIzaSyCMMO7MTUgOrSOFURsnQIQFPJBSumtHzto';
+const CLIENT_ID = '1027882235957-a9pt2jde8okfrh8a1ebsdlk0ic2raiel.apps.googleusercontent.com';
+
+const SCOPES = 'https://www.googleapis.com/auth/drive.file';
+
+// ==========================================
+// 2. VARIABLES GLOBALES Y SELECTORES
 // ==========================================
 const loginScreen = document.getElementById('login-screen');
 const vaultScreen = document.getElementById('vault-screen');
