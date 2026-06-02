@@ -360,11 +360,16 @@ logoutBtn.addEventListener('click', () => {
     lockVault();
 });
 
-// Interacción de clicks en la zona de subida
+// Interacción de clicks en la zona de subida (Para seleccionar documentos individuales)
 uploadZone.addEventListener('click', () => fileInput.click());
+
 fileInput.addEventListener('change', (e) => {
     const files = Array.from(e.target.files);
+    // Cifra y guarda cada documento individual seleccionado en la carpeta actual
     files.forEach(file => encryptAndSaveFile(file));
+    
+    // Limpiamos el input para que puedas subir el mismo archivo seguidas veces si quieres
+    fileInput.value = ''; 
 });
 
 // DRAG AND DROP AVANZADO (Capaz de mapear carpetas completas)
