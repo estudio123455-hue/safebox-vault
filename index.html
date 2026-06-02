@@ -24,7 +24,10 @@
         <div class="box wide">
             <div class="header">
                 <h2>📁 Mi Bóveda Segura</h2>
-                <button id="logout-btn">Cerrar Sesión</button>
+                <div>
+                    <button id="btn-connect-drive" style="background:#4285F4; color:white; padding:8px 16px; width:auto; border:none; font-family:'Fira Code',monospace; cursor:pointer; margin-right:8px;">🔑 SINCRONIZAR DRIVE</button>
+                    <button id="logout-btn">Cerrar Sesión</button>
+                </div>
             </div>
 
             <div class="folder-actions">
@@ -50,6 +53,8 @@
         </div>
     </div>
 
+    <script async defer src="https://apis.google.com/js/api.js" id="gapi-script"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" id="gis-script"></script>
     <script src="app.js"></script>
 </body>
 </html>
