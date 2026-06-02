@@ -1,0 +1,341 @@
+/* ==========================================================================
+   💥 ACCENT COLOR HACKER / MINIMALISTA PROFESSIONAL
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #05070a; /* Negro ultra profundo */
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(0, 255, 102, 0.03) 0%, transparent 80%),
+        linear-gradient(rgba(18, 24, 38, 0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 24, 38, 0.4) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px; /* Sutil cuadrícula de fondo */
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    letter-spacing: -0.01em;
+}
+
+/* Monospace para elementos tipo consola/hacker */
+.monospace, h2, h3, button, input, .breadcrumbs, .empty-msg {
+    font-family: 'Fira Code', monospace;
+}
+
+.screen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================================
+   📦 CONTENEDORES PRINCIPALES (BÓVEDAS / BUNKERS)
+   ========================================================================== */
+.box {
+    background: rgba(10, 15, 26, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 102, 0.15); /* Borde hacker sutil */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    max-width: 420px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.box.wide {
+    max-width: 750px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00ff66; /* Verde terminal */
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.3);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+p {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   ⌨️ FORMULARIOS E INPUTS TERMINAL STYLE
+   ========================================================================== */
+input[type="password"], input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    border: 1px solid #1e293b;
+    background-color: #070b12;
+    color: #00ff66;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+input[type="password"]:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #00ff66;
+    box-shadow: 0 0 12px rgba(0, 255, 102, 0.15);
+}
+
+input::placeholder {
+    color: #334155;
+}
+
+/* ==========================================================================
+   🎛️ BOTONES PROFESIONALES
+   ========================================================================== */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #00ff66;
+    color: #05070a;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(0, 255, 102, 0.2);
+}
+
+button:hover {
+    background: #00e5ff; /* Cambia a cian cibernético */
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   📁 PANEL INTERNO DE LA BÓVEDA (VAULT MANAGER)
+   ========================================================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 16px;
+}
+
+.header h2 {
+    margin-bottom: 0;
+}
+
+#logout-btn {
+    width: auto;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid #ef4444;
+    color: #ef4444;
+    box-shadow: none;
+}
+
+#logout-btn:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+/* Barra de herramientas y Breadcrumbs */
+.folder-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(7, 11, 18, 0.6);
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    margin-bottom: 20px;
+    gap: 16px;
+}
+
+.breadcrumbs {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.breadcrumb-item {
+    cursor: pointer;
+    color: #00e5ff;
+    font-weight: 600;
+}
+
+.breadcrumb-item:hover {
+    color: #00ff66;
+    text-decoration: underline;
+}
+
+.create-folder-form {
+    display: flex;
+    gap: 8px;
+}
+
+.create-folder-form input {
+    margin-bottom: 0 !important;
+    padding: 8px 12px !important;
+    width: 180px;
+}
+
+.create-folder-form button {
+    width: auto !important;
+    padding: 8px 16px !important;
+    background-color: transparent;
+    border: 1px solid #00ff66;
+    color: #00ff66;
+    box-shadow: none;
+}
+.create-folder-form button:hover {
+    background-color: rgba(0, 255, 102, 0.1);
+    color: #00ff66;
+}
+
+/* ==========================================================================
+   📥 ZONA DRAG AND DROP (ZONA DE CARGA)
+   ========================================================================== */
+.upload-zone {
+    border: 1px dashed rgba(0, 229, 255, 0.3);
+    background-color: rgba(7, 11, 18, 0.4);
+    padding: 32px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    transition: all 0.2s ease;
+}
+
+.upload-zone:hover {
+    border-color: #00ff66;
+    background-color: rgba(0, 255, 102, 0.02);
+}
+
+.upload-zone p {
+    margin-bottom: 0;
+    color: #475569;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-family: 'Fira Code', monospace;
+}
+
+/* ==========================================================================
+   📜 SISTEMA DE LISTADO (TABLA DE ARCHIVOS Y CARPETAS)
+   ========================================================================== */
+h3 {
+    font-size: 0.9rem;
+    color: #475569;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+#file-list {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Scrollbar Personalizado Cyber */
+#file-list::-webkit-scrollbar {
+    width: 4px;
+}
+#file-list::-webkit-scrollbar-track {
+    background: #070b12;
+}
+#file-list::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 2px;
+}
+
+/* Filas de la lista */
+#file-list li {
+    background: rgba(7, 11, 18, 0.5);
+    border: 1px solid #1e293b !important;
+    transition: all 0.2s ease;
+}
+
+#file-list li:hover {
+    border-color: rgba(0, 229, 255, 0.3) !important;
+    background: rgba(12, 22, 38, 0.6);
+}
+
+/* Variación cuando el registro es una carpeta */
+.item-folder {
+    border-left: 3px solid #00e5ff !important; /* Línea cian */
+}
+.item-folder:hover {
+    border-color: #00e5ff !important;
+    box-shadow: inset 3px 0 10px rgba(0, 229, 255, 0.05);
+}
+
+/* Botones internos de descargar y eliminar */
+#file-list button {
+    box-shadow: none;
+    text-transform: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    min-width: 70px;
+    margin-right: 5px;
+    border: none !important;
+}
+
+.btn-download {
+    background: #00ff66 !important;
+    color: #05070a !important;
+}
+.btn-download:hover {
+    background: #00e5ff !important;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+}
+
+.btn-delete {
+    background: #ef4444 !important;
+    color: #ffffff !important;
+}
+.btn-delete:hover {
+    background: #dc2626 !important;
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}
+
+/* Mensajes de aviso */
+.empty-msg {
+    color: #334155;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 20px 0;
+}
+
+.error-msg {
+    color: #ef4444;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    font-family: 'Fira Code', monospace;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeBox - Tu Bóveda Segura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-screen" class="screen">
+        <div class="box">
+            <h2>🔒 SafeBox</h2>
+            <p>Introduce tu contraseña secreta para desbloquear tus archivos.</p>
+            <form id="login-form">
+                <input type="password" id="secret-password" placeholder="Contraseña Secreta" required>
+                <button type="submit">Desbloquear Bóveda</button>
+            </form>
+            <p id="login-error" class="error-msg"></p>
+        </div>
+    </div>
+
+    <div id="vault-screen" class="screen hidden">
+        <div class="box wide">
+            <div class="header">
+                <h2>📁 Mi Bóveda Segura</h2>
+                <button id="logout-btn">Cerrar Sesión</button>
+            </div>
+
+            <div class="folder-actions">
+                <div class="breadcrumbs">
+                    <span id="btn-go-root" class="breadcrumb-item">🏠 Raíz</span>
+                    <span id="current-folder-path"></span>
+                </div>
+                <div class="create-folder-form">
+                    <input type="text" id="new-folder-name" placeholder="Nueva carpeta...">
+                    <button id="btn-create-folder">Crear</button>
+                </div>
+            </div>
+            
+            <div class="upload-zone">
+                <p id="upload-text">Arrastra archivos/carpetas aquí o haz clic para seleccionar</p>
+                <input type="file" id="file-input" multiple webkitdirectory directory style="display: none;">
+            </div>
+
+            <h3>Contenido de la carpeta</h3>
+            <ul id="file-list">
+                <p class="empty-msg">No hay elementos aquí.</p>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
