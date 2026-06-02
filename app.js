@@ -1,9 +1,9 @@
 // ==========================================
-// 1. CONFIGURACIÓN DE CREDENCIALES GOOGLE
+// 1. CONFIGURACIÓN DE CREDENCIALES GOOGLE (SEGURAS)
 // ==========================================
-// ⚠️ REEMPLAZA ESTOS VALORES CON TUS LLAVES REALES
-const API_KEY = 'AIzaSyCMMO7MTUgOrSOFURsnQIQFPJBSumtHzto';
-const CLIENT_ID = '1027882235957-a9pt2jde8okfrh8a1ebsdlk0ic2raiel.apps.googleusercontent.com';
+// Vercel inyectará estos valores automáticamente en producción
+const API_KEY = window.env?.API_KEY || "DESARROLLO_LOCAL_KEY";
+const CLIENT_ID = window.env?.CLIENT_ID || "DESARROLLO_LOCAL_ID";
 
 const SCOPES = 'https://www.googleapis.com/auth/drive.file';
 
